@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://gfw-workspace.nl/">
   <link rel="icon" type="image/png" href="gesta-logo.png">
-  <title>gfw-workspace.nl | RKVV Gesta</title>
+  <title>Workspace | RKVV Gesta | GFW</title>
   <style>
     :root {
       color-scheme: light;
@@ -77,6 +77,11 @@
     .highlight p { color: #665154; font-size: 14px; margin: 0 0 22px; }
     .action { display: inline-block; border-radius: 9px; background: var(--red); color: white; font-size: 14px; text-decoration: none; font-weight: 750; padding: 11px 18px; transition: background .16s; }
     .action:hover { background: var(--red-dark); color: white; }
+    .websites-inline { display: inline; }
+    .website-separator { color: var(--red); margin-inline: .3em; font-weight: 900; }
+    .community-note { margin-top: 20px; background: var(--red-soft); border: 1px solid #efdee0; border-radius: 16px; padding: 23px 29px; display: flex; align-items: baseline; gap: 17px; }
+    .community-note strong { color: var(--red-dark); font-size: 18px; flex: 0 0 auto; }
+    .community-note p { margin: 0; color: #51474a; font-size: 15px; }
     .contact-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 17px; }
     .contact-card { display: flex; flex-direction: column; align-items: flex-start; padding: 25px 24px; }
     .contact-card h3 { font-size: 20px; min-height: 50px; }
@@ -98,6 +103,7 @@
       .hero { padding-top: 44px; padding-bottom: 90px; }
       .intro { flex-direction: column; align-items: flex-start; padding: 24px; gap: 14px; }
       .grid,.details { grid-template-columns: 1fr; }
+      .community-note { flex-direction: column; gap: 5px; padding: 22px 23px; }
       .card,.contact-card { padding: 24px; }
       .details .left,.highlight { padding: 25px; }
       .details dl { grid-template-columns: 112px minmax(0,1fr); }
@@ -137,7 +143,7 @@
     <section class="intro" aria-labelledby="intro-title">
       <div>
         <h2 id="intro-title" data-i18n="introTitle">Onderdeel van RKVV Gesta</h2>
-        <p><span data-i18n="introPart1">Deze pagina beschrijft de relatie tussen het domein</span> <strong>gfw-workspace.nl</strong>, <span data-i18n="introPart2">het evenement GaldersFeestWeekend en de vereniging RKVV Gesta. Het domein is bedoeld voor Google Workspace en interne samenwerking; dit is geen openbare inlogomgeving.</span></p>
+        <p><span data-i18n="introPart1">Deze pagina beschrijft de relatie tussen het domein</span> <strong>gfw-workspace.nl</strong>, <span data-i18n="introPart2">het evenement GaldersFeestWeekend en de vereniging RKVV Gesta. Het domein ondersteunt de samenwerking van onze vrijwilligers via Google Workspace.</span></p>
       </div>
       <span class="pill" data-i18n="internalCollab">Interne samenwerking</span>
     </section>
@@ -147,14 +153,18 @@
       <section class="card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V7l8-4 8 4v13"/><path d="M9 20v-7h6v7"/><path d="M4 10h16"/></svg></div>
         <h3>RKVV Gesta</h3>
-        <p data-i18n="gestaDescription">RKVV Gesta is een amateurvoetbalvereniging uit Galder, actief sinds 1949. De vereniging zet zich in voor voetbal, sportiviteit, plezier en betrokkenheid in Galder en Strijbeek, met een belangrijke rol voor leden en vrijwilligers.</p>
+        <p data-i18n="gestaDescription">RKVV Gesta is een amateurvoetbalvereniging uit Galder, actief sinds 1949. Naast voetbal en sportiviteit staan gezelligheid, saamhorigheid en elkaar ontmoeten centraal. De club brengt mensen van verschillende leeftijden en achtergronden samen in Galder en Strijbeek, mede dankzij haar leden en vrijwilligers.</p>
       </section>
       <section class="card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 15h3"/></svg></div>
         <h3>GaldersFeestWeekend (GFW)</h3>
-        <p data-i18n="gfwDescription">Het GaldersFeestWeekend is een jaarlijks evenement dat onderdeel uitmaakt van RKVV Gesta en door vrijwilligers wordt georganiseerd. De verschillende commissies werken samen aan de voorbereiding en uitvoering van het evenement.</p>
+        <p data-i18n="gfwDescription">Het GaldersFeestWeekend is een jaarlijks evenement van RKVV Gesta, georganiseerd door vrijwilligers. Het weekend draait om gezelligheid, samenkomen en verbinding: een plek waar mensen van alle leeftijden en achtergronden elkaar ontmoeten en samen plezier beleven.</p>
       </section>
     </div>
+    <aside class="community-note" aria-label="Waar we voor staan" data-i18n-aria="communityLabel">
+      <strong data-i18n="communityTitle">Samen brengen we mensen bij elkaar.</strong>
+      <p data-i18n="communityDescription">Bij RKVV Gesta en het GaldersFeestWeekend geloven we in gezelligheid, saamhorigheid en een plek waar iedereen zich welkom voelt. Sport en evenementen verbinden mensen en maken onze gemeenschap sterker.</p>
+    </aside>
 
     <h2 class="section-title" id="gegevens" data-i18n="officialDetails">Officiële gegevens</h2>
     <section class="details" aria-labelledby="details-title">
@@ -167,7 +177,6 @@
           <dt data-i18n="visitingAddress">Bezoekadres</dt><dd>Sportpark De Leeuwerik<br>Sint Jacobsstraat 1b<br>4855 AK Galder, <span data-i18n="country">Nederland</span></dd>
           <dt data-i18n="generalEmail">Algemene e-mail</dt><dd><a href="mailto:info@rkvvgesta.nl">info@rkvvgesta.nl</a></dd>
           <dt data-i18n="officialSite">Officiële website</dt><dd><a href="https://www.rkvvgesta.nl/" target="_blank" rel="noopener noreferrer">www.rkvvgesta.nl</a></dd>
-          <dt data-i18n="workspaceDomain">Workspace-domein</dt><dd>gfw-workspace.nl</dd>
         </dl>
       </div>
       <aside class="highlight">
@@ -194,7 +203,7 @@
         <p data-i18n="gfwContactDescription">Voor vragen over het evenement, de organisatie, activiteiten en deelnames.</p>
         <dl>
           <dt data-i18n="generalEmailColon">Algemene e-mail:</dt><dd><a href="mailto:info@gfw.events">info@gfw.events</a></dd>
-          <dt data-i18n="websiteColon">Website:</dt><dd><a href="https://gfw.events/" target="_blank" rel="noopener noreferrer">gfw.events ↗</a></dd>
+          <dt data-i18n="websiteColon">Website:</dt><dd class="websites-inline"><a href="https://gfw.events/" target="_blank" rel="noopener noreferrer">gfw.events ↗</a><span class="website-separator" aria-hidden="true">•</span><a href="https://galdersfeestweekend.nl/" target="_blank" rel="noopener noreferrer">galdersfeestweekend.nl ↗</a></dd>
         </dl>
       </section>
       <section class="contact-card">
@@ -225,10 +234,12 @@
         domainInfo: "Informatie over dit domein", heroTitle: "Een digitale werkplek voor onze vrijwilligers.",
         heroDescription: "is het domein dat RKVV Gesta gebruikt voor de interne digitale samenwerking rond het GaldersFeestWeekend (GFW).",
         introTitle: "Onderdeel van RKVV Gesta", introPart1: "Deze pagina beschrijft de relatie tussen het domein",
-        introPart2: "het evenement GaldersFeestWeekend en de vereniging RKVV Gesta. Het domein is bedoeld voor Google Workspace en interne samenwerking; dit is geen openbare inlogomgeving.",
+        introPart2: "het evenement GaldersFeestWeekend en de vereniging RKVV Gesta. Het domein ondersteunt de samenwerking van onze vrijwilligers via Google Workspace.",
         internalCollab: "Interne samenwerking", organizationSection: "Over de organisatie",
-        gestaDescription: "RKVV Gesta is een amateurvoetbalvereniging uit Galder, actief sinds 1949. De vereniging zet zich in voor voetbal, sportiviteit, plezier en betrokkenheid in Galder en Strijbeek, met een belangrijke rol voor leden en vrijwilligers.",
-        gfwDescription: "Het GaldersFeestWeekend is een jaarlijks evenement dat onderdeel uitmaakt van RKVV Gesta en door vrijwilligers wordt georganiseerd. De verschillende commissies werken samen aan de voorbereiding en uitvoering van het evenement.",
+        gestaDescription: "RKVV Gesta is een amateurvoetbalvereniging uit Galder, actief sinds 1949. Naast voetbal en sportiviteit staan gezelligheid, saamhorigheid en elkaar ontmoeten centraal. De club brengt mensen van verschillende leeftijden en achtergronden samen in Galder en Strijbeek, mede dankzij haar leden en vrijwilligers.",
+        gfwDescription: "Het GaldersFeestWeekend is een jaarlijks evenement van RKVV Gesta, georganiseerd door vrijwilligers. Het weekend draait om gezelligheid, samenkomen en verbinding: een plek waar mensen van alle leeftijden en achtergronden elkaar ontmoeten en samen plezier beleven.",
+        communityLabel: "Waar we voor staan", communityTitle: "Samen brengen we mensen bij elkaar.",
+        communityDescription: "Bij RKVV Gesta en het GaldersFeestWeekend geloven we in gezelligheid, saamhorigheid en een plek waar iedereen zich welkom voelt. Sport en evenementen verbinden mensen en maken onze gemeenschap sterker.",
         officialDetails: "Officiële gegevens", organizationDetails: "Organisatiegegevens",
         detailsDescription: "Ter verduidelijking van de organisatorische relatie en het beheer van dit domein.",
         organization: "Organisatie", registrationNumber: "KvK-nummer", visitingAddress: "Bezoekadres", country: "Nederland",
@@ -248,10 +259,12 @@
         domainInfo: "About this domain", heroTitle: "A digital workspace for our volunteers.",
         heroDescription: "is the domain RKVV Gesta uses for internal digital collaboration around GaldersFeestWeekend (GFW).",
         introTitle: "Part of RKVV Gesta", introPart1: "This page explains the relationship between the domain",
-        introPart2: "the GaldersFeestWeekend event, and the RKVV Gesta sports association. The domain is used for Google Workspace and internal collaboration; this is not a public login portal.",
+        introPart2: "the GaldersFeestWeekend event and the RKVV Gesta sports association. This domain supports collaboration between our volunteers through Google Workspace.",
         internalCollab: "Internal collaboration", organizationSection: "About the organization",
-        gestaDescription: "RKVV Gesta is an amateur football club based in Galder, established in 1949. The club promotes football, sportsmanship, enjoyment and community involvement in Galder and Strijbeek, with an important role for its members and volunteers.",
-        gfwDescription: "GaldersFeestWeekend is an annual event organized by volunteers as part of RKVV Gesta. Various committees work together to prepare and run the event.",
+        gestaDescription: "RKVV Gesta is an amateur football club based in Galder, established in 1949. Alongside football and sportsmanship, the club values a friendly atmosphere, togetherness and meeting new people. Members and volunteers help bring together people of different ages and backgrounds in Galder and Strijbeek.",
+        gfwDescription: "GaldersFeestWeekend is an annual event run by volunteers as part of RKVV Gesta. It is all about fun, coming together and community spirit: a place for people of all ages and backgrounds to meet and enjoy time together.",
+        communityLabel: "What we stand for", communityTitle: "Bringing people together.",
+        communityDescription: "At RKVV Gesta and GaldersFeestWeekend, we value a welcoming atmosphere, togetherness and a place where everyone belongs. Sport and events connect people and strengthen our community.",
         officialDetails: "Official information", organizationDetails: "Organization details",
         detailsDescription: "Information clarifying the organizational relationship and management of this domain.",
         organization: "Organization", registrationNumber: "Chamber of Commerce no.", visitingAddress: "Visiting address", country: "The Netherlands",
