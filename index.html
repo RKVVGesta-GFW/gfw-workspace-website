@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ed0000">
-  <meta name="description" content="Informatie over gfw-workspace.nl, het officiële interne samenwerkingsdomein van RKVV Gesta voor GaldersFeestWeekend (GFW).">
+  <meta name="theme-color" content="#b3313b">
+  <meta name="description" content="Informatie over gfw-workspace.nl, het interne samenwerkingsdomein van RKVV Gesta voor het GaldersFeestWeekend (GFW).">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://gfw-workspace.nl/">
   <link rel="icon" type="image/png" href="gesta-logo.png">
@@ -12,174 +12,290 @@
   <style>
     :root {
       color-scheme: light;
-      --red: #ed0000;
-      --red-dark: #c90000;
-      --red-soft: #fff0f0;
-      --ink: #20242b;
-      --ink-soft: #5b646e;
-      --background: #f6f7f8;
-      --white: #ffffff;
-      --line: #e6e8eb;
-      --shadow: 0 18px 48px rgba(30, 31, 36, .075);
+      --red: #b3313b;
+      --red-dark: #8f222c;
+      --red-light: #c84952;
+      --red-soft: #fbedee;
+      --ink: #25272d;
+      --ink-soft: #57606c;
+      --background: #f7f7f8;
+      --white: #fff;
+      --line: #e6e7ea;
+      --shadow: 0 18px 46px rgba(32, 30, 36, .075);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--background); color: var(--ink); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+    body { margin: 0; background: var(--background); color: var(--ink); font: 16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
     a { color: var(--red-dark); text-underline-offset: 3px; }
-    a:hover { color: #960000; }
-    a:focus-visible { outline: 3px solid #ffb0b0; outline-offset: 4px; border-radius: 4px; }
-    .wrap { width: min(1100px, 100%); margin-inline: auto; padding-inline: 28px; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,.42); background: rgba(255,255,255,.1); border-radius: 100px; padding: 7px 13px; color: #fff; font-size: 12px; font-weight: 750; letter-spacing: .02em; }
-    .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff; }
-    h1, h2, h3, p { overflow-wrap: break-word; }
-    header { background: var(--red); color: white; position: relative; overflow: hidden; }
-    header::after { content: ""; position: absolute; width: 540px; height: 540px; top: 65px; right: -220px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 65px rgba(255,255,255,.035), 0 0 0 130px rgba(255,255,255,.025); pointer-events: none; }
-    .top { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 18px; position: relative; z-index: 1; }
-    .brand { display: flex; align-items: center; gap: 14px; color: white; text-decoration: none; }
-    .brand img { width: 62px; height: 62px; object-fit: contain; padding: 5px; border-radius: 50%; background: #fff; flex-shrink: 0; }
-    .brand strong { font-size: 19px; font-weight: 850; line-height: 1.1; letter-spacing: -.015em; }
-    .toplink { color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid rgba(255,255,255,.5); border-radius: 9px; padding: 10px 16px; transition: background .2s; white-space: nowrap; }
-    .toplink:hover { background: #fff; color: var(--red-dark); }
-    .header-line { border-top: 1px solid rgba(255,255,255,.22); }
-    .hero { position: relative; padding-top: 72px; padding-bottom: 106px; z-index: 1; }
-    h1 { max-width: 740px; margin: 24px 0 16px; font-size: clamp(36px, 5.6vw, 64px); line-height: 1.13; letter-spacing: -.045em; font-weight: 820; }
-    .hero p { max-width: 710px; margin: 0; font-size: clamp(16px, 1.9vw, 19px); color: #fff4f4; }
-    .hero .domain { font-weight: 800; color: white; }
-    main { margin-top: -44px; padding-bottom: 72px; position: relative; z-index: 2; }
-    .intro { padding: 30px 34px; border-radius: 17px; background: white; border: 1px solid var(--line); box-shadow: var(--shadow); display: flex; justify-content: space-between; gap: 24px; align-items: center; }
+    a:hover { color: #6c171e; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #ffb5b8; outline-offset: 4px; border-radius: 6px; }
+    .wrap { width: min(1100px,100%); margin-inline: auto; padding-inline: 28px; }
+    h1,h2,h3,p { overflow-wrap: break-word; }
+    .site-header { color: #fff; background: linear-gradient(119deg,#a52a35 0%,#b7353f 65%,#c54a52 100%); position: relative; overflow: hidden; }
+    .site-header::after { content: ""; position: absolute; width: 545px; height: 545px; right: -220px; top: 65px; border-radius: 50%; border: 1px solid rgba(255,255,255,.20); box-shadow: 0 0 0 66px rgba(255,255,255,.035),0 0 0 132px rgba(255,255,255,.025); pointer-events: none; }
+    .top { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-block: 16px; position: relative; z-index: 1; }
+    .brand { display: flex; align-items: center; gap: 13px; color: white; text-decoration: none; }
+    .brand img { width: 60px; height: 60px; object-fit: contain; padding: 4px; border-radius: 50%; background: white; flex-shrink: 0; }
+    .brand strong { font-size: 19px; font-weight: 850; letter-spacing: -.02em; white-space: nowrap; }
+    .top-actions { display: flex; align-items: center; justify-content: flex-end; gap: 9px; flex-wrap: wrap; }
+    .toplink { color: #fff; border: 1px solid rgba(255,255,255,.55); border-radius: 9px; padding: 9px 13px; text-decoration: none; font-size: 13px; font-weight: 740; line-height: 1.5; white-space: nowrap; transition: .16s; }
+    .toplink:hover { color: var(--red-dark); background: #fff; }
+    .toplink.workspace { background: #fff; color: var(--red-dark); border-color: #fff; }
+    .toplink.workspace:hover { background: var(--red-soft); }
+    .lang-switch { display: inline-flex; gap: 3px; border-radius: 9px; border: 1px solid rgba(255,255,255,.45); padding: 3px; }
+    .lang-switch button { background: transparent; border: 0; border-radius: 6px; color: white; cursor: pointer; padding: 6px 8px; min-width: 34px; font: 750 12px/1.6 inherit; font-family: inherit; font-size: 12px; font-weight: 750; }
+    .lang-switch button[aria-pressed="true"] { background: #fff; color: var(--red-dark); }
+    .header-line { border-top: 1px solid rgba(255,255,255,.20); }
+    .hero { position: relative; z-index: 1; padding-top: 67px; padding-bottom: 104px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 7px 13px; border: 1px solid rgba(255,255,255,.45); background: rgba(255,255,255,.09); border-radius: 100px; color: white; font-size: 12px; font-weight: 750; letter-spacing: .01em; }
+    .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: white; }
+    h1 { max-width: 770px; margin: 24px 0 16px; font-size: clamp(36px,5.6vw,62px); line-height: 1.14; letter-spacing: -.045em; font-weight: 820; }
+    .hero p { max-width: 700px; margin: 0; font-size: clamp(16px,1.8vw,19px); color: #fff8f8; }
+    .hero strong { color: white; }
+    main { margin-top: -44px; padding-bottom: 75px; position: relative; z-index: 2; }
+    .intro { padding: 29px 34px; border-radius: 17px; background: white; border: 1px solid var(--line); box-shadow: var(--shadow); display: flex; justify-content: space-between; gap: 22px; align-items: center; }
     .intro h2 { margin: 0 0 8px; font-size: 22px; letter-spacing: -.025em; }
-    .intro p { margin: 0; color: var(--ink-soft); max-width: 740px; }
-    .pill { font-size: 12px; white-space: nowrap; font-weight: 800; padding: 11px 14px; color: #bc0000; border-radius: 10px; background: var(--red-soft); }
-    .section-title { margin: 48px 0 17px; color: #b80000; font-size: 13px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
-    .grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
-    .card { background: #fff; border-radius: 16px; border: 1px solid var(--line); padding: 29px; }
-    .card h3 { margin: 0 0 12px; font-size: 23px; letter-spacing: -.035em; line-height: 1.22; }
-    .card p { margin: 0; color: var(--ink-soft); }
-    .icon { display: grid; place-items: center; width: 43px; height: 43px; margin-bottom: 20px; border-radius: 12px; background: var(--red-soft); color: var(--red-dark); }
+    .intro p { margin: 0; max-width: 740px; color: var(--ink-soft); }
+    .pill { background: var(--red-soft); color: var(--red-dark); padding: 10px 13px; border-radius: 10px; font-size: 12px; font-weight: 750; white-space: nowrap; }
+    .section-title { color: var(--red-dark); font-size: 13px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; margin: 47px 0 17px; }
+    .grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 19px; }
+    .card, .contact-card { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
+    .card h3, .contact-card h3 { margin: 0 0 11px; font-size: 22px; letter-spacing: -.03em; line-height: 1.25; }
+    .card p, .contact-card p { color: var(--ink-soft); margin: 0; }
+    .icon { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 12px; margin-bottom: 19px; background: var(--red-soft); color: var(--red-dark); }
     .icon svg { width: 23px; height: 23px; }
-    .details { display: grid; grid-template-columns: 1.08fr .92fr; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: white; }
-    .details .left { padding: 33px 36px; }
+    .details { display: grid; grid-template-columns: 1.08fr .92fr; border: 1px solid var(--line); border-radius: 16px; background: white; overflow: hidden; }
+    .details .left { padding: 32px 35px; }
     .details h3 { font-size: 23px; margin: 0 0 11px; letter-spacing: -.035em; }
     .details p { margin: 0; color: var(--ink-soft); }
-    .details dl { display: grid; grid-template-columns: 148px 1fr; column-gap: 10px; row-gap: 15px; margin: 23px 0 0; }
-    .details dt { font-size: 14px; color: #707882; }
-    .details dd { margin: 0; font-size: 14px; font-weight: 650; overflow-wrap: anywhere; }
-    .highlight { background: #fff3f3; border-left: 1px solid #ffe0e0; padding: 36px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
-    .highlight strong { color: #a70000; font-size: 17px; display: block; margin-bottom: 11px; }
-    .highlight p { color: #634b4b; font-size: 14px; margin: 0 0 22px; }
-    .action { display: inline-block; border-radius: 9px; background: var(--red); color: #fff; text-decoration: none; font-weight: 750; font-size: 14px; padding: 11px 18px; transition: background .2s; }
+    dl { margin: 0; }
+    .details dl { display: grid; grid-template-columns: 148px minmax(0,1fr); gap: 14px 10px; margin-top: 22px; }
+    .details dt { color: #747a83; font-size: 14px; }
+    .details dd { font-size: 14px; font-weight: 650; margin: 0; overflow-wrap: anywhere; }
+    .highlight { background: #fcf1f2; border-left: 1px solid #f5dbdd; padding: 35px; display: flex; align-items: flex-start; flex-direction: column; justify-content: center; }
+    .highlight strong { color: var(--red-dark); font-size: 17px; display: block; margin-bottom: 11px; }
+    .highlight p { color: #665154; font-size: 14px; margin: 0 0 22px; }
+    .action { display: inline-block; border-radius: 9px; background: var(--red); color: white; font-size: 14px; text-decoration: none; font-weight: 750; padding: 11px 18px; transition: background .16s; }
     .action:hover { background: var(--red-dark); color: white; }
-    .contact-card { padding: 28px 30px; border-radius: 16px; background: white; border: 1px solid var(--line); display: flex; flex-direction: column; align-items: flex-start; }
-    .contact-card h3 { font-size: 21px; margin: 0 0 9px; letter-spacing: -.025em; }
-    .contact-card p { color: var(--ink-soft); margin: 0 0 22px; }
-    .contact-card .contact-link { font-weight: 750; font-size: 15px; overflow-wrap: anywhere; }
-    .contact-card .contact-site { margin-top: 10px; font-size: 14px; }
-    footer { background: #fff; border-top: 1px solid var(--line); padding-block: 26px; }
+    .contact-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 17px; }
+    .contact-card { display: flex; flex-direction: column; align-items: flex-start; padding: 25px 24px; }
+    .contact-card h3 { font-size: 20px; min-height: 50px; }
+    .contact-card p { font-size: 14px; margin: 0 0 20px; }
+    .contact-card dl { margin-top: auto; width: 100%; border-top: 1px solid var(--line); padding-top: 15px; }
+    .contact-card dt { color: #737b83; font-size: 12px; margin-bottom: 2px; }
+    .contact-card dd { font-weight: 730; font-size: 14px; margin: 0 0 12px; overflow-wrap: anywhere; }
+    .contact-card dd:last-child { margin-bottom: 0; }
+    footer { background: #fff; border-top: 1px solid var(--line); padding-block: 25px; }
     .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--ink-soft); font-size: 13px; }
-    footer a { color: #c10000; }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .contact-card h3 { min-height: 0; } }
     @media (max-width: 720px) {
       .wrap { padding-inline: 20px; }
-      .top { padding-block: 13px; }
-      .brand img { width: 50px; height: 50px; }
-      .brand strong { font-size: 16px; }
-      .toplink { font-size: 12px; white-space: normal; text-align: center; padding: 8px 10px; }
-      .hero { padding-top: 57px; padding-bottom: 90px; }
-      .hero::after { opacity: .35; }
-      .intro { flex-direction: column; align-items: flex-start; padding: 24px; gap: 15px; }
-      .grid, .details { grid-template-columns: 1fr; }
-      .card, .contact-card { padding: 25px; }
-      .details .left, .highlight { padding: 26px; }
-      .details dl { grid-template-columns: 113px minmax(0, 1fr); }
-      .highlight { border-left: 0; border-top: 1px solid #ffe0e0; }
-      .section-title { margin-top: 37px; }
-      main { padding-bottom: 50px; }
+      .top { align-items: flex-start; padding-block: 14px; flex-direction: column; }
+      .brand img { width: 51px; height: 51px; }
+      .brand strong { font-size: 17px; }
+      .top-actions { justify-content: flex-start; gap: 7px; width: 100%; }
+      .toplink { padding: 7px 10px; font-size: 12px; }
+      .hero { padding-top: 44px; padding-bottom: 90px; }
+      .intro { flex-direction: column; align-items: flex-start; padding: 24px; gap: 14px; }
+      .grid,.details { grid-template-columns: 1fr; }
+      .card,.contact-card { padding: 24px; }
+      .details .left,.highlight { padding: 25px; }
+      .details dl { grid-template-columns: 112px minmax(0,1fr); }
+      .highlight { border-left: none; border-top: 1px solid #f5dbdd; }
+      .section-title { margin-top: 36px; }
+      main { padding-bottom: 55px; }
     }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
   </style>
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="wrap top">
       <div class="brand" aria-label="RKVV Gesta">
-        <img src="gesta-logo.png" alt="Logo van RKVV Gesta" width="62" height="62">
+        <img src="gesta-logo.png" alt="Logo van RKVV Gesta" width="60" height="60">
         <strong>RKVV GESTA</strong>
       </div>
-      <a class="toplink" href="https://www.rkvvgesta.nl/" target="_blank" rel="noopener noreferrer">Officiële website ↗</a>
+      <nav class="top-actions" aria-label="Snelle links en taalkeuze" data-i18n-aria="navLabel">
+        <a class="toplink" href="https://www.rkvvgesta.nl/" target="_blank" rel="noopener noreferrer"><span data-i18n="officialSite">Officiële website</span> ↗</a>
+        <!-- VERVANG LATER ALLEEN DE LINK HIERONDER met de exacte inlog-/Drive-link van jullie Workspace. -->
+        <a class="toplink workspace" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer" data-i18n-title="workspaceTitle" title="Open Google Drive (later te vervangen door de eigen Workspace-link)">Workspace ↗</a>
+        <div class="lang-switch" role="group" aria-label="Kies een taal" data-i18n-aria="languageLabel">
+          <button type="button" data-lang="nl" aria-pressed="true" lang="nl" title="Nederlands">NL</button>
+          <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+        </div>
+      </nav>
     </div>
     <div class="header-line"></div>
     <div class="wrap hero">
-      <div class="eyebrow">Informatie over dit domein</div>
-      <h1>Een digitale werkplek voor onze vrijwilligers.</h1>
-      <p><span class="domain">gfw-workspace.nl</span> is het domein dat RKVV Gesta gebruikt voor de interne digitale samenwerking rond het GaldersFeestWeekend (GFW).</p>
+      <span class="eyebrow" data-i18n="domainInfo">Informatie over dit domein</span>
+      <h1 data-i18n="heroTitle">Een digitale werkplek voor onze vrijwilligers.</h1>
+      <p><strong>gfw-workspace.nl</strong> <span data-i18n="heroDescription">is het domein dat RKVV Gesta gebruikt voor de interne digitale samenwerking rond het GaldersFeestWeekend (GFW).</span></p>
     </div>
   </header>
 
   <main class="wrap">
     <section class="intro" aria-labelledby="intro-title">
       <div>
-        <h2 id="intro-title">Onderdeel van RKVV Gesta</h2>
-        <p>Deze pagina beschrijft de relatie tussen het domein <strong>gfw-workspace.nl</strong>, het evenement GaldersFeestWeekend en de vereniging RKVV Gesta. Het domein is bedoeld voor Google Workspace en interne samenwerking; dit is geen openbare inlogomgeving.</p>
+        <h2 id="intro-title" data-i18n="introTitle">Onderdeel van RKVV Gesta</h2>
+        <p><span data-i18n="introPart1">Deze pagina beschrijft de relatie tussen het domein</span> <strong>gfw-workspace.nl</strong>, <span data-i18n="introPart2">het evenement GaldersFeestWeekend en de vereniging RKVV Gesta. Het domein is bedoeld voor Google Workspace en interne samenwerking; dit is geen openbare inlogomgeving.</span></p>
       </div>
-      <span class="pill">Interne samenwerking</span>
+      <span class="pill" data-i18n="internalCollab">Interne samenwerking</span>
     </section>
 
-    <h2 class="section-title" id="organisatie">Over de organisatie</h2>
+    <h2 class="section-title" id="organisatie" data-i18n="organizationSection">Over de organisatie</h2>
     <div class="grid" aria-labelledby="organisatie">
       <section class="card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V7l8-4 8 4v13"/><path d="M9 20v-7h6v7"/><path d="M4 10h16"/></svg></div>
         <h3>RKVV Gesta</h3>
-        <p>RKVV Gesta is een amateurvoetbalvereniging uit Galder, actief sinds 1949. De vereniging zet zich in voor voetbal, sportiviteit, plezier en betrokkenheid in Galder en Strijbeek, met een belangrijke rol voor leden en vrijwilligers.</p>
+        <p data-i18n="gestaDescription">RKVV Gesta is een amateurvoetbalvereniging uit Galder, actief sinds 1949. De vereniging zet zich in voor voetbal, sportiviteit, plezier en betrokkenheid in Galder en Strijbeek, met een belangrijke rol voor leden en vrijwilligers.</p>
       </section>
       <section class="card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 15h3"/></svg></div>
         <h3>GaldersFeestWeekend (GFW)</h3>
-        <p>Het GaldersFeestWeekend is een jaarlijks evenement dat onderdeel uitmaakt van RKVV Gesta en door vrijwilligers wordt georganiseerd. De verschillende commissies werken samen aan de voorbereiding en uitvoering van het evenement.</p>
+        <p data-i18n="gfwDescription">Het GaldersFeestWeekend is een jaarlijks evenement dat onderdeel uitmaakt van RKVV Gesta en door vrijwilligers wordt georganiseerd. De verschillende commissies werken samen aan de voorbereiding en uitvoering van het evenement.</p>
       </section>
     </div>
 
-    <h2 class="section-title" id="gegevens">Officiële gegevens</h2>
+    <h2 class="section-title" id="gegevens" data-i18n="officialDetails">Officiële gegevens</h2>
     <section class="details" aria-labelledby="details-title">
       <div class="left">
-        <h3 id="details-title">Organisatiegegevens</h3>
-        <p>Ter verduidelijking van de organisatorische relatie en het beheer van dit domein.</p>
+        <h3 id="details-title" data-i18n="organizationDetails">Organisatiegegevens</h3>
+        <p data-i18n="detailsDescription">Ter verduidelijking van de organisatorische relatie en het beheer van dit domein.</p>
         <dl>
-          <dt>Organisatie</dt><dd>RKVV Gesta</dd>
-          <dt>KvK-nummer</dt><dd>40280451</dd>
-          <dt>Bezoekadres</dt><dd>Sportpark De Leeuwerik<br>Sint Jacobsstraat 1b<br>4855 AK Galder, Nederland</dd>
-          <dt>Algemene e-mail</dt><dd><a href="mailto:info@rkvvgesta.nl">info@rkvvgesta.nl</a></dd>
-          <dt>Officiële website</dt><dd><a href="https://www.rkvvgesta.nl/" target="_blank" rel="noopener noreferrer">www.rkvvgesta.nl</a></dd>
-          <dt>Workspace-domein</dt><dd>gfw-workspace.nl</dd>
+          <dt data-i18n="organization">Organisatie</dt><dd>RKVV Gesta</dd>
+          <dt data-i18n="registrationNumber">KvK-nummer</dt><dd>40280451</dd>
+          <dt data-i18n="visitingAddress">Bezoekadres</dt><dd>Sportpark De Leeuwerik<br>Sint Jacobsstraat 1b<br>4855 AK Galder, <span data-i18n="country">Nederland</span></dd>
+          <dt data-i18n="generalEmail">Algemene e-mail</dt><dd><a href="mailto:info@rkvvgesta.nl">info@rkvvgesta.nl</a></dd>
+          <dt data-i18n="officialSite">Officiële website</dt><dd><a href="https://www.rkvvgesta.nl/" target="_blank" rel="noopener noreferrer">www.rkvvgesta.nl</a></dd>
+          <dt data-i18n="workspaceDomain">Workspace-domein</dt><dd>gfw-workspace.nl</dd>
         </dl>
       </div>
       <aside class="highlight">
-        <strong>Waar wordt dit domein voor gebruikt?</strong>
-        <p>RKVV Gesta gebruikt gfw-workspace.nl als afzonderlijk domein voor Google Workspace. Hiermee organiseren de vrijwilligerscommissies van GFW hun documenten en bestanden in gedeelde Drives. De officiële verenigingswebsite en bestaande e-maildiensten worden onafhankelijk beheerd.</p>
-        <a class="action" href="https://www.rkvvgesta.nl/" target="_blank" rel="noopener noreferrer">Bezoek RKVV Gesta ↗</a>
+        <strong data-i18n="domainPurposeTitle">Waar wordt dit domein voor gebruikt?</strong>
+        <p data-i18n="domainPurposeDescription">RKVV Gesta gebruikt gfw-workspace.nl als afzonderlijk domein voor Google Workspace. Hiermee organiseren de vrijwilligerscommissies van GFW hun documenten en bestanden in gedeelde Drives. De officiële verenigingswebsite en bestaande e-maildiensten worden onafhankelijk beheerd.</p>
+        <a class="action" href="https://www.rkvvgesta.nl/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitGesta">Bezoek RKVV Gesta</span> ↗</a>
       </aside>
     </section>
 
-    <h2 class="section-title" id="contact">Contact en vragen</h2>
-    <div class="grid" aria-labelledby="contact">
+    <h2 class="section-title" id="contact" data-i18n="contactTitle">Contact en vragen</h2>
+    <div class="contact-grid" aria-labelledby="contact">
       <section class="contact-card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg></div>
-        <h3>Google Workspace</h3>
-        <p>Vragen over dit domein, toegang tot de gedeelde Drives of de interne digitale werkomgeving van GFW?</p>
-        <a class="contact-link" href="mailto:beheerder@gfw-workspace.nl">beheerder@gfw-workspace.nl</a>
+        <h3>RKVV Gesta</h3>
+        <p data-i18n="gestaContactDescription">Voor vragen over de voetbalvereniging, lidmaatschap en overige verenigingszaken.</p>
+        <dl>
+          <dt data-i18n="generalEmailColon">Algemene e-mail:</dt><dd><a href="mailto:info@rkvvgesta.nl">info@rkvvgesta.nl</a></dd>
+          <dt data-i18n="websiteColon">Website:</dt><dd><a href="https://www.rkvvgesta.nl/" target="_blank" rel="noopener noreferrer">rkvvgesta.nl ↗</a></dd>
+        </dl>
+      </section>
+      <section class="contact-card">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 15h3"/></svg></div>
+        <h3>GaldersFeestWeekend (GFW)</h3>
+        <p data-i18n="gfwContactDescription">Voor vragen over het evenement, de organisatie, activiteiten en deelnames.</p>
+        <dl>
+          <dt data-i18n="generalEmailColon">Algemene e-mail:</dt><dd><a href="mailto:info@gfw.events">info@gfw.events</a></dd>
+          <dt data-i18n="websiteColon">Website:</dt><dd><a href="https://gfw.events/" target="_blank" rel="noopener noreferrer">gfw.events ↗</a></dd>
+        </dl>
       </section>
       <section class="contact-card">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
-        <h3>GaldersFeestWeekend (GFW)</h3>
-        <p>Voor vragen over het evenement, de organisatie of andere zaken rondom GFW kun je terecht via:</p>
-        <a class="contact-link" href="mailto:info@gfw.events">info@gfw.events</a>
-        <a class="contact-site" href="https://gfw.events/" target="_blank" rel="noopener noreferrer">Website: gfw.events ↗</a>
+        <h3>Google Workspace</h3>
+        <p data-i18n="workspaceContactDescription">Voor vragen over toegang, de gedeelde Drives of het beheer van de digitale werkomgeving van GFW.</p>
+        <dl>
+          <dt data-i18n="generalEmailColon">Algemene e-mail:</dt><dd><a href="mailto:beheerder@gfw-workspace.nl">beheerder@gfw-workspace.nl</a></dd>
+          <dt data-i18n="workspaceDomainColon">Workspace-domein:</dt><dd><a href="https://gfw-workspace.nl/">gfw-workspace.nl ↗</a></dd>
+        </dl>
       </section>
     </div>
   </main>
 
   <footer>
     <div class="wrap foot">
-      <span>© RKVV Gesta · Informatie over gfw-workspace.nl</span>
-      <span>Officiële vereniging: <a href="https://www.rkvvgesta.nl/">rkvvgesta.nl</a></span>
+      <span>© RKVV Gesta · <span data-i18n="footerInfo">Informatie over gfw-workspace.nl</span></span>
+      <span><span data-i18n="footerOfficial">Officiële vereniging:</span> <a href="https://www.rkvvgesta.nl/">rkvvgesta.nl</a></span>
     </div>
   </footer>
+
+  <script>
+    // De standaardtaal is Nederlands. Alles werkt lokaal, zonder externe vertaaldienst.
+    const translations = {
+      nl: {
+        navLabel: "Snelle links en taalkeuze", languageLabel: "Kies een taal",
+        officialSite: "Officiële website", workspaceTitle: "Open Google Drive (later te vervangen door de eigen Workspace-link)",
+        domainInfo: "Informatie over dit domein", heroTitle: "Een digitale werkplek voor onze vrijwilligers.",
+        heroDescription: "is het domein dat RKVV Gesta gebruikt voor de interne digitale samenwerking rond het GaldersFeestWeekend (GFW).",
+        introTitle: "Onderdeel van RKVV Gesta", introPart1: "Deze pagina beschrijft de relatie tussen het domein",
+        introPart2: "het evenement GaldersFeestWeekend en de vereniging RKVV Gesta. Het domein is bedoeld voor Google Workspace en interne samenwerking; dit is geen openbare inlogomgeving.",
+        internalCollab: "Interne samenwerking", organizationSection: "Over de organisatie",
+        gestaDescription: "RKVV Gesta is een amateurvoetbalvereniging uit Galder, actief sinds 1949. De vereniging zet zich in voor voetbal, sportiviteit, plezier en betrokkenheid in Galder en Strijbeek, met een belangrijke rol voor leden en vrijwilligers.",
+        gfwDescription: "Het GaldersFeestWeekend is een jaarlijks evenement dat onderdeel uitmaakt van RKVV Gesta en door vrijwilligers wordt georganiseerd. De verschillende commissies werken samen aan de voorbereiding en uitvoering van het evenement.",
+        officialDetails: "Officiële gegevens", organizationDetails: "Organisatiegegevens",
+        detailsDescription: "Ter verduidelijking van de organisatorische relatie en het beheer van dit domein.",
+        organization: "Organisatie", registrationNumber: "KvK-nummer", visitingAddress: "Bezoekadres", country: "Nederland",
+        generalEmail: "Algemene e-mail", workspaceDomain: "Workspace-domein",
+        domainPurposeTitle: "Waar wordt dit domein voor gebruikt?",
+        domainPurposeDescription: "RKVV Gesta gebruikt gfw-workspace.nl als afzonderlijk domein voor Google Workspace. Hiermee organiseren de vrijwilligerscommissies van GFW hun documenten en bestanden in gedeelde Drives. De officiële verenigingswebsite en bestaande e-maildiensten worden onafhankelijk beheerd.",
+        visitGesta: "Bezoek RKVV Gesta", contactTitle: "Contact en vragen",
+        gestaContactDescription: "Voor vragen over de voetbalvereniging, lidmaatschap en overige verenigingszaken.",
+        gfwContactDescription: "Voor vragen over het evenement, de organisatie, activiteiten en deelnames.",
+        workspaceContactDescription: "Voor vragen over toegang, de gedeelde Drives of het beheer van de digitale werkomgeving van GFW.",
+        generalEmailColon: "Algemene e-mail:", websiteColon: "Website:", workspaceDomainColon: "Workspace-domein:",
+        footerInfo: "Informatie over gfw-workspace.nl", footerOfficial: "Officiële vereniging:"
+      },
+      en: {
+        navLabel: "Quick links and language selection", languageLabel: "Choose a language",
+        officialSite: "Official website", workspaceTitle: "Open Google Drive (replace with your specific Workspace link later)",
+        domainInfo: "About this domain", heroTitle: "A digital workspace for our volunteers.",
+        heroDescription: "is the domain RKVV Gesta uses for internal digital collaboration around GaldersFeestWeekend (GFW).",
+        introTitle: "Part of RKVV Gesta", introPart1: "This page explains the relationship between the domain",
+        introPart2: "the GaldersFeestWeekend event, and the RKVV Gesta sports association. The domain is used for Google Workspace and internal collaboration; this is not a public login portal.",
+        internalCollab: "Internal collaboration", organizationSection: "About the organization",
+        gestaDescription: "RKVV Gesta is an amateur football club based in Galder, established in 1949. The club promotes football, sportsmanship, enjoyment and community involvement in Galder and Strijbeek, with an important role for its members and volunteers.",
+        gfwDescription: "GaldersFeestWeekend is an annual event organized by volunteers as part of RKVV Gesta. Various committees work together to prepare and run the event.",
+        officialDetails: "Official information", organizationDetails: "Organization details",
+        detailsDescription: "Information clarifying the organizational relationship and management of this domain.",
+        organization: "Organization", registrationNumber: "Chamber of Commerce no.", visitingAddress: "Visiting address", country: "The Netherlands",
+        generalEmail: "General email", workspaceDomain: "Workspace domain",
+        domainPurposeTitle: "What is this domain used for?",
+        domainPurposeDescription: "RKVV Gesta uses gfw-workspace.nl as a separate domain for Google Workspace. GFW volunteer committees use shared Drives to organize their documents and files. The club's official website and existing email services are managed independently.",
+        visitGesta: "Visit RKVV Gesta", contactTitle: "Contact and enquiries",
+        gestaContactDescription: "For questions about the football club, membership and other club matters.",
+        gfwContactDescription: "For questions about the event, its organization, activities and participation.",
+        workspaceContactDescription: "For questions about access, shared Drives or administration of GFW's digital workspace.",
+        generalEmailColon: "General email:", websiteColon: "Website:", workspaceDomainColon: "Workspace domain:",
+        footerInfo: "Information about gfw-workspace.nl", footerOfficial: "Official association:"
+      }
+    };
+    function changeLanguage(lang) {
+      const dict = translations[lang] || translations.nl;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((node) => {
+        const replacement = dict[node.dataset.i18n];
+        if (replacement !== undefined) node.textContent = replacement;
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach((node) => {
+        const replacement = dict[node.dataset.i18nAria];
+        if (replacement !== undefined) node.setAttribute('aria-label', replacement);
+      });
+      document.querySelectorAll('[data-i18n-title]').forEach((node) => {
+        const replacement = dict[node.dataset.i18nTitle];
+        if (replacement !== undefined) node.setAttribute('title', replacement);
+      });
+      document.querySelectorAll('.lang-switch button').forEach((button) => {
+        button.setAttribute('aria-pressed', String(button.dataset.lang === lang));
+      });
+      const description = document.querySelector('meta[name="description"]');
+      if (description) description.content = lang === 'en'
+        ? 'Information about gfw-workspace.nl, the internal collaboration domain of RKVV Gesta for GaldersFeestWeekend (GFW).'
+        : 'Informatie over gfw-workspace.nl, het interne samenwerkingsdomein van RKVV Gesta voor het GaldersFeestWeekend (GFW).';
+      try { localStorage.setItem('gfw-workspace-language', lang); } catch (_) { /* opslag is optioneel */ }
+    }
+    document.querySelectorAll('.lang-switch button').forEach((button) => {
+      button.addEventListener('click', () => changeLanguage(button.dataset.lang));
+    });
+    let savedLanguage = 'nl';
+    try { if (localStorage.getItem('gfw-workspace-language') === 'en') savedLanguage = 'en'; } catch (_) { /* opslag is optioneel */ }
+    changeLanguage(savedLanguage);
+  </script>
 </body>
 </html>
