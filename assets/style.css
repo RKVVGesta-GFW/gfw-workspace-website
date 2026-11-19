@@ -29,3 +29,12 @@
 @media(max-width:850px){.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
 @media(max-width:650px){.primary-nav{gap:7px}.primary-nav a{min-height:37px;padding:8px 11px}.content{padding-top:27px;padding-bottom:27px}.hero{padding-bottom:53px}.contact-card{grid-template-rows:auto auto 1fr auto}.footer-grid{grid-template-columns:1fr;gap:26px}.footer-grid>div:first-child{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){.primary-nav a{transition:none}}
+
+/* V5: compact footer contact details and consistent five-page links */
+.footer-contact-list{row-gap:3px;column-gap:12px;line-height:1.45}
+.footer-contact-list dt,.footer-contact-list dd{line-height:1.45}
+.footer-page-nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:5px 12px;border-top:1px solid var(--line);padding-top:15px;padding-bottom:15px;font-size:13px;font-weight:650}
+.footer-page-nav a{text-decoration:none;color:var(--muted);padding:2px 0}
+.footer-page-nav a:hover,.footer-page-nav a:focus-visible{color:var(--dark);text-decoration:underline}
+.footer-dot{color:#b7bbc2;user-select:none}
+@media(max-width:650px){.footer-page-nav{justify-content:flex-start;gap:3px 9px;font-size:12px}}
