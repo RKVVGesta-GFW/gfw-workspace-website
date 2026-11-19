@@ -1,18 +1,22 @@
-# gfw-workspace.nl – GitHub Pages website
+# GFW Workspace — GitHub Pages website
 
-Vijf echte pagina’s: `/`, `/organisatie/`, `/galdersfeestweekend/`, `/workspace/` en `/contact/`. NL/EN op alle pagina’s; keuze wordt lokaal onthouden.
+De actieve pagina’s zijn `/`, `/rkvv-gesta/`, `/galdersfeestweekend/`, `/google-workspace/` en `/contact/`.
+De oude routes `/organisatie/` en `/workspace/` zijn verwijderd. Ze verwijzen niet meer door; verwijder deze twee oude mappen ook handmatig uit de bestaande GitHub-repository.
 
-## Installatie
+## Upload naar GitHub
 
-1. Maak eerst een back-up van de bestaande repository.
-2. Upload **de inhoud van deze map** naar de root van `RKVVGesta-GFW/gfw-workspace-website`, met behoud van de bestaande `gesta-logo.png`.
-3. Behoud ook je bestaande GitHub Pages settings: `main` / `root` en Custom domain `gfw-workspace.nl`.
-4. De `CNAME` en `.nojekyll` bestanden horen in de root.
-5. Controleer na publicatie alle vijf pagina’s en de NL/EN-knoppen.
+1. Maak een back-up van de repository `RKVVGesta-GFW/gfw-workspace-website`.
+2. Pak de ZIP uit en upload de **inhoud** (niet de ZIP of overkoepelende map) naar de hoofdmap (`main`) van de repository.
+3. Behoud het bestaande `gesta-logo.png` bestand in de hoofdmap; dit ZIP-bestand bevat niet het oorspronkelijke logo.
+4. Behoud GitHub Pages op `main` + `/(root)` en het custom domain `gfw-workspace.nl`.
+5. Controleer na publicatie alle vijf pagina’s, de nieuwe URL’s en de NL/EN-schakelaar.
 
-## Let op voor publicatie
+### Wat is aangepast
+- Consistente browser-tabtitels: `Workspace - ...`.
+- Nieuwe URLs voor RKVV Gesta en Google Workspace, zonder doorverwijzing vanaf de oude paden.
+- Duidelijker vormgegeven navigatieknoppen, kortere home-titel.
+- Contactblokken uitgelijnd, zonder mailknoppen of extra contactadressenlink.
+- Footer met dezelfde label-opmaak voor telefoon, e-mail en website, en gelijkmatiger verticale witruimte.
+- De elf e-mailadressen op de GFW-pagina zijn behouden.
 
-- **Het originele `gesta-logo.png` bestand moet in de repository blijven staan**. Dit pakket bevat geen nieuwe kopie.
-- De 11 `@gfw.events`-adressen volgen de eerder gekozen lijst (info, voorzitter, secretariaat, administratie, bar, personeel, sponsoring, activiteiten, beleving, artiesten, marketing). Controleer of deze nog overeenkomen met de actuele Combell-mailboxen vóór publicatie.
-- Het Google Drive-knopje verwijst naar `https://drive.google.com/` (geen privé-deellink).
-- Dit pakket wijzigt je GitHub-repository niet automatisch.
+Dit ZIP-bestand publiceert of wijzigt niet zelfstandig de GitHub-repository.
