@@ -179,3 +179,7 @@ body{background:var(--bg)}
  .top-actions > .header-action,.top-actions > .lang-toggle{height:46px;min-height:46px;max-height:46px}
  .top-actions > .lang-toggle .lang-option{height:35px;min-height:0;max-height:35px;padding:0 2px}
 }
+
+/* V12: match line spacing in the left footer column with other footer details */
+.footer-grid > div:first-child p{margin:0 0 3px;line-height:1.45}
+.footer-grid > div:first-child p:last-child{margin-bottom:0}
