@@ -184,9 +184,13 @@ body{background:var(--bg)}
 .footer-grid > div:first-child p{margin:0 0 3px;line-height:1.45}
 .footer-grid > div:first-child p:last-child{margin-bottom:0}
 
-/* V13: lijn de onderkant van de laatste tekstregel links uit met adres/contact op desktop. */
-@media (min-width:851px) {
-  .footer-grid { align-items:stretch; }
-  .footer-grid > div:first-child { display:flex; flex-direction:column; }
-  .footer-grid > div:first-child p:last-child { margin-top:auto; margin-bottom:0; }
+
+
+/* V16: Align the left footer text lines with the address and contact rows.
+   Avoid pushing the note to the bottom: use the same vertical rhythm as the other columns. */
+@media (min-width: 851px) {
+  .footer-grid { align-items: start; }
+  .footer-grid > div:first-child { display: block; }
+  .footer-grid > div:first-child p { margin: 0; line-height: 1.5; }
+  .footer-grid > div:first-child p + p { margin-top: 2px; }
 }

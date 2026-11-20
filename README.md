@@ -33,3 +33,6 @@ Controleer na publicatie de vijf pagina's, taalwissel, browsertabblad en een **n
 ## Toegang en beveiliging
 
 De Workspace-knop opent een gedeelde Google Drive. Alleen gebruikers met de juiste Google-rechten kunnen de inhoud bekijken. Deze publieke repository mag geen wachtwoorden, tokens of vertrouwelijke documenten bevatten.
+
+
+V16: Voettekst links volgt nu dezelfde regelafstand en verticale indeling als bezoekadres en contact op desktop. Alleen assets/style.css gewijzigd.
