@@ -40,3 +40,5 @@ V11: de totale hoogte van de NL/EN-knop is nu exact 46px, gelijk aan de twee lin
 
 
 V12: linker footerkolom heeft dezelfde compacte regelafstand als de bezoekadres- en contactgegevens. Alleen assets/style.css is gewijzigd.
+
+V13: Onderkant laatste tekstregel in de linker footerkolom wordt op desktop uitgelijnd met de laatste regels in de middelste en rechter kolom. Alleen assets/style.css gewijzigd.
