@@ -75,3 +75,25 @@
   .hero h1{font-size:clamp(28px,8.4vw,36px)}
 }
 @media(prefers-reduced-motion:reduce){.top-actions .header-action{transition:none}}
+
+/* V7: dark mobile chrome where Safari allows it, cleaner action buttons and one-tap language toggle */
+html{background:#8f222d}
+body{background:var(--bg)}
+.site-head{background:linear-gradient(115deg,#84202b,#a72b36 65%,#bb444f)}
+.top-actions .header-action-outline{background:#761b25!important;border-color:rgba(255,255,255,.68);color:#fff!important}
+.top-actions .header-action-outline:hover{background:#63151d!important}
+.top-actions .header-action-primary{background:#fff!important;color:#81232c!important}
+.top-actions .lang-toggle{appearance:none;-webkit-appearance:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:space-between;gap:5px;min-height:48px;padding:5px;border:1.5px solid rgba(255,255,255,.7);background:#781c27;color:#fff;border-radius:12px;font:inherit;box-shadow:0 2px 8px rgba(50,0,6,.12)}
+.lang-toggle .lang-option{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:38px;padding:6px 10px;border-radius:8px;font-size:15px;font-weight:850;line-height:1.15;color:#fff;transition:background .15s ease,color .15s ease}
+.lang-toggle[data-current-lang="nl"] .lang-option[data-lang-label="nl"],.lang-toggle[data-current-lang="en"] .lang-option[data-lang-label="en"]{background:white;color:#81232c}
+.lang-toggle:hover{border-color:#fff}
+@media(max-width:650px){
+  .mast{padding-top:calc(23px + env(safe-area-inset-top, 0px));padding-bottom:23px;gap:19px}
+  .top-actions{padding-top:3px;padding-bottom:6px;gap:9px}
+  .top-actions .header-action{min-height:48px;padding:11px 13px;font-size:13px}
+  .top-actions .lang-toggle{min-height:48px}
+  .nav-wrap{margin-top:7px;border-top-color:rgba(255,255,255,.25)}
+  .nav-wrap .primary-nav{padding-top:18px;padding-bottom:19px;row-gap:10px}
+}
+@media(max-width:390px){.top-actions .header-action{font-size:12px;padding:9px 10px}.lang-toggle .lang-option{min-width:40px;padding:6px 8px}}
+@media(prefers-reduced-motion:reduce){.lang-toggle .lang-option{transition:none}}

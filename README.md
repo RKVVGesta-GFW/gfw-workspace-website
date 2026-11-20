@@ -20,3 +20,9 @@ De oude routes `/organisatie/` en `/workspace/` zijn verwijderd. Ze verwijzen ni
 - De elf e-mailadressen op de GFW-pagina zijn behouden.
 
 Dit ZIP-bestand publiceert of wijzigt niet zelfstandig de GitHub-repository.
+
+### Update V7
+- De Workspace-knop en de Google Drive-knop verwijzen nu naar de gedeelde Drive-map.
+- De bovenste externe links zijn duidelijker, met een donkerrode knop voor de officiële website.
+- De NL/EN-schakelaar is één grote knop die bij iedere klik omschakelt.
+- Extra ruimte in de mobiele header en donkerrode browser-themakleur. iOS Safari bepaalt zelf of de systeemstatusbalk kan meekleuren.
