@@ -1,44 +1,97 @@
-# GFW Workspace — GitHub Pages website
+# GFW Workspace — Website
 
-De actieve pagina’s zijn `/`, `/rkvv-gesta/`, `/galdersfeestweekend/`, `/google-workspace/` en `/contact/`.
-De oude routes `/organisatie/` en `/workspace/` zijn verwijderd. Ze verwijzen niet meer door; verwijder deze twee oude mappen ook handmatig uit de bestaande GitHub-repository.
+Officiële informatieve website voor **gfw-workspace.nl**, het digitale samenwerkingsdomein van **RKVV Gesta** voor het **GaldersFeestWeekend (GFW)**.
 
-## Upload naar GitHub
+De website wordt gehost via GitHub Pages en geeft informatie over de vereniging, het evenement, Google Workspace en de officiële contactgegevens.
 
-1. Maak een back-up van de repository `RKVVGesta-GFW/gfw-workspace-website`.
-2. Pak de ZIP uit en upload de **inhoud** (niet de ZIP of overkoepelende map) naar de hoofdmap (`main`) van de repository.
-3. Behoud het bestaande `gesta-logo.png` bestand in de hoofdmap; dit ZIP-bestand bevat niet het oorspronkelijke logo.
-4. Behoud GitHub Pages op `main` + `/(root)` en het custom domain `gfw-workspace.nl`.
-5. Controleer na publicatie alle vijf pagina’s, de nieuwe URL’s en de NL/EN-schakelaar.
+**Website:** https://gfw-workspace.nl  
+**Organisatie:** RKVV Gesta  
+**Hosting:** GitHub Pages
 
-### Wat is aangepast
-- Consistente browser-tabtitels: `Workspace - ...`.
-- Nieuwe URLs voor RKVV Gesta en Google Workspace, zonder doorverwijzing vanaf de oude paden.
-- Duidelijker vormgegeven navigatieknoppen, kortere home-titel.
-- Contactblokken uitgelijnd, zonder mailknoppen of extra contactadressenlink.
-- Footer met dezelfde label-opmaak voor telefoon, e-mail en website, en gelijkmatiger verticale witruimte.
-- De elf e-mailadressen op de GFW-pagina zijn behouden.
+## Functionaliteiten
 
-Dit ZIP-bestand publiceert of wijzigt niet zelfstandig de GitHub-repository.
+- Ondersteuning voor Nederlands (NL) en Engels (EN).
+- Responsive ontwerp voor desktop, tablet en mobiel.
+- Vijf afzonderlijke pagina's met duidelijke navigatie.
+- Rechtstreekse toegang tot Google Workspace voor bevoegde vrijwilligers.
+- Officiële organisatiegegevens en contactadressen.
+- Beveiligde HTTPS-verbinding via GitHub Pages.
 
-### Update V7
-- De Workspace-knop en de Google Drive-knop verwijzen nu naar de gedeelde Drive-map.
-- De bovenste externe links zijn duidelijker, met een donkerrode knop voor de officiële website.
-- De NL/EN-schakelaar is één grote knop die bij iedere klik omschakelt.
-- Extra ruimte in de mobiele header en donkerrode browser-themakleur. iOS Safari bepaalt zelf of de systeemstatusbalk kan meekleuren.
+## Pagina's
 
+| Pagina | URL |
+|---|---|
+| Home | `/` |
+| RKVV Gesta | `/rkvv-gesta/` |
+| GaldersFeestWeekend | `/galdersfeestweekend/` |
+| Google Workspace | `/google-workspace/` |
+| Contact & gegevens | `/contact/` |
 
-V8: Mobile header actions are in one row, all exactly 46px high, with compact spacing above the divider.
+De oude routes `/organisatie/` en `/workspace/` worden niet meer gebruikt.
 
+## Projectstructuur
 
-V9: Compactere mobiele typografie voor koppen, tekst, navigatie, kaarten en footer. Desktop onveranderd.
+```text
+gfw-workspace-website/
+├── index.html
+├── rkvv-gesta/
+│   └── index.html
+├── galdersfeestweekend/
+│   └── index.html
+├── google-workspace/
+│   └── index.html
+├── contact/
+│   └── index.html
+├── assets/
+│   ├── style.css
+│   └── site.js
+├── gesta-logo.png
+├── CNAME
+├── .nojekyll
+└── README.md
+```
 
-## V10
-Extra 12px witruimte tussen het categorielabel en de vetgedrukte titel in de drie contactblokken. Alleen assets/style.css is gewijzigd t.o.v. V9.
+## Beheer en onderhoud
 
-V11: de totale hoogte van de NL/EN-knop is nu exact 46px, gelijk aan de twee links (desktop en mobiel). Alleen assets/style.css is gewijzigd.
+De website bestaat uit statische HTML-, CSS- en JavaScript-bestanden.
 
+| Bestand | Functie |
+|---|---|
+| `index.html` | Homepage |
+| `assets/style.css` | Vormgeving en mobiele weergave |
+| `assets/site.js` | Vertalingen en taalwissel |
+| Overige `index.html`-bestanden | Inhoud van de afzonderlijke pagina's |
+| `CNAME` | Koppeling met het domein |
 
-V12: linker footerkolom heeft dezelfde compacte regelafstand als de bezoekadres- en contactgegevens. Alleen assets/style.css is gewijzigd.
+Wijzigingen worden via de `main`-branch automatisch gepubliceerd door GitHub Pages.
 
-V13: Onderkant laatste tekstregel in de linker footerkolom wordt op desktop uitgelijnd met de laatste regels in de middelste en rechter kolom. Alleen assets/style.css gewijzigd.
+**GitHub Pages-configuratie:**
+- Branch: `main`
+- Publicatiemap: `/(root)`
+- Domein: `gfw-workspace.nl`
+- HTTPS: ingeschakeld
+
+## Google Workspace
+
+Google Workspace wordt gebruikt voor de interne samenwerking en documentopslag van de GFW-vrijwilligerscommissies.
+
+Via de Workspace-knop op de website kunnen bevoegde gebruikers de gedeelde Google Drive-omgeving openen.
+
+De toegangsrechten worden afzonderlijk beheerd binnen Google Workspace. De website verleent zelf geen toegang tot vertrouwelijke bestanden.
+
+## Beveiliging
+
+Deze repository is openbaar. De broncode kan door iedereen worden bekeken, maar alleen gebruikers met de juiste GitHub-rechten kunnen rechtstreeks wijzigingen doorvoeren.
+
+Er worden geen wachtwoorden, API-sleutels, toegangstokens of vertrouwelijke documenten in deze repository opgeslagen.
+
+## Projectinformatie
+
+**Organisatie:** RKVV Gesta  
+**Evenement:** GaldersFeestWeekend (GFW)  
+**Website:** https://gfw-workspace.nl  
+**Repository:** `RKVVGesta-GFW/gfw-workspace-website`
+
+---
+
+*Deze website is bedoeld voor publieke informatie over RKVV Gesta, GaldersFeestWeekend en de digitale samenwerking via Google Workspace.*
