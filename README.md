@@ -36,3 +36,6 @@ De Workspace-knop opent een gedeelde Google Drive. Alleen gebruikers met de juis
 
 
 V16: Voettekst links volgt nu dezelfde regelafstand en verticale indeling als bezoekadres en contact op desktop. Alleen assets/style.css gewijzigd.
+
+
+V17: footer op desktop gebruikt één vaste regelhoogte van 21px in alle drie kolommen; zonder extra witruimte tussen de regels.

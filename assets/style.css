@@ -194,3 +194,26 @@ body{background:var(--bg)}
   .footer-grid > div:first-child p { margin: 0; line-height: 1.5; }
   .footer-grid > div:first-child p + p { margin-top: 2px; }
 }
+
+/* V17 — shared desktop footer line grid. Each column starts directly below
+   its heading and uses exactly the same 21px baseline rhythm. */
+@media (min-width: 851px) {
+  .footer-grid { align-items: start; }
+  .footer-grid > div > h2,
+  .footer-grid > div > h3 { margin: 0 0 12px; line-height: 22px; }
+  .footer-grid > div:first-child p,
+  .footer-grid > div:nth-child(2) p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .footer-grid > div:first-child p + p { margin-top: 0; }
+  .footer-contact-list {
+    margin: 0;
+    row-gap: 0;
+    column-gap: 12px;
+    line-height: 21px;
+  }
+  .footer-contact-list dt,
+  .footer-contact-list dd { line-height: 21px; }
+}
