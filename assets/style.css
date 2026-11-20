@@ -146,3 +146,36 @@ body{background:var(--bg)}
 
 /* More breathing room between contact-category label and heading */
 .contact-card .tag{margin-bottom:12px}
+
+/* V11: exact gelijke buitenhoogte voor de drie headerknoppen (desktop én mobiel). */
+.top-actions{align-items:stretch}
+.top-actions > .header-action,
+.top-actions > .lang-toggle{
+  box-sizing:border-box;
+  height:46px;
+  min-height:46px;
+  max-height:46px;
+  margin:0;
+  border-width:1.5px;
+  align-self:center;
+}
+.top-actions > .header-action{display:inline-flex;align-items:center;justify-content:center;line-height:1.1}
+.top-actions > .lang-toggle{
+  display:inline-flex;
+  align-items:center;
+  padding:4px;
+  line-height:1;
+}
+.top-actions > .lang-toggle .lang-option{
+  height:35px;
+  min-height:0;
+  max-height:35px;
+  padding:0 7px;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+}
+@media(max-width:650px){
+ .top-actions > .header-action,.top-actions > .lang-toggle{height:46px;min-height:46px;max-height:46px}
+ .top-actions > .lang-toggle .lang-option{height:35px;min-height:0;max-height:35px;padding:0 2px}
+}

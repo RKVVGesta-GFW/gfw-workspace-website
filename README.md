@@ -35,3 +35,5 @@ V9: Compactere mobiele typografie voor koppen, tekst, navigatie, kaarten en foot
 
 ## V10
 Extra 12px witruimte tussen het categorielabel en de vetgedrukte titel in de drie contactblokken. Alleen assets/style.css is gewijzigd t.o.v. V9.
+
+V11: de totale hoogte van de NL/EN-knop is nu exact 46px, gelijk aan de twee links (desktop en mobiel). Alleen assets/style.css is gewijzigd.
