@@ -143,3 +143,6 @@ body{background:var(--bg)}
   .hero p{font-size:14px}
   .primary-nav a{font-size:11px;padding:7px 8px}
 }
+
+/* More breathing room between contact-category label and heading */
+.contact-card .tag{margin-bottom:12px}

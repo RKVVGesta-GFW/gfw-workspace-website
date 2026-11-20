@@ -32,3 +32,6 @@ V8: Mobile header actions are in one row, all exactly 46px high, with compact sp
 
 
 V9: Compactere mobiele typografie voor koppen, tekst, navigatie, kaarten en footer. Desktop onveranderd.
+
+## V10
+Extra 12px witruimte tussen het categorielabel en de vetgedrukte titel in de drie contactblokken. Alleen assets/style.css is gewijzigd t.o.v. V9.
