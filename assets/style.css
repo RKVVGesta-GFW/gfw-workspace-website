@@ -217,3 +217,8 @@ body{background:var(--bg)}
   .footer-contact-list dt,
   .footer-contact-list dd { line-height: 21px; }
 }
+
+/* V18: slightly smaller page hero titles on desktop only; mobile unchanged. */
+@media (min-width: 851px) {
+  .hero h1 { font-size: clamp(35px, 4.3vw, 52px); }
+}

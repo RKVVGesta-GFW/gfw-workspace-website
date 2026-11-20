@@ -39,3 +39,6 @@ V16: Voettekst links volgt nu dezelfde regelafstand en verticale indeling als be
 
 
 V17: footer op desktop gebruikt één vaste regelhoogte van 21px in alle drie kolommen; zonder extra witruimte tussen de regels.
+
+
+V18: Alleen grote paginatitels op desktop iets verkleind. Mobiele titels en overige koppen blijven gelijk.
